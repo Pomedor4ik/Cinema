@@ -41,7 +41,7 @@ a {
 }
 
 .nav-item>a:hover{
-    color: blue;
+    color: rgb(190, 54, 253);
 }
 
 .sub-nav {
@@ -137,4 +137,87 @@ a {
     height: 40px;
     background-color: rgb(69, 75, 168);
     border: 10px;
+}
+
+.qualityBlock {
+    position: fixed;
+    top: 80%;
+    width: 10%;
+    height: 30px;
+    background-color: grey;
+}
+
+.qualityText {
+    animation-name: qualityBlock;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-color: rgb(140, 82, 167);
+    transition-duration: 0.3s;
+    border: 1px;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qualityMenu>a{
+    margin: 4px 0px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.qualityMenu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.qualityBlock:hover>.qualityText{
+    animation-play-state: paused;
+    background-color: rgb(131, 84, 175);
+    color: rgb(255, 255, 255);
+}
+
+
+
+@keyframes qualityBlock {
+    0% {
+        transform: translate(-5px, 0px);
+        background-color: white;
+        color: black;
+    }
+    10% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(5px, 0px);
+    }
+    30% {
+        transform: translate(-7px, 0px);
+    }
+    40% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(7px, 0px);
+    }
+    60% {
+        transform: translate(0px, 0px);
+    }
+    70% {
+        transform: translate(10px, 0);
+    }
+    80% {
+        transform: translate(0px, 0px);
+    }
+    90% {
+        transform: translate(-10px, 0px);
+    }
 }
